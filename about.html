@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+</head>
+<body class="about">
+    <nav>
+        <ul class="sidebar">
+           <li onclick=hideSidebar()><a class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+           <li><a href="index.html">Home</a></li>
+           <li><a href="about.html">About</a></li>
+           
+           <li><a href="input.html"><button class="btn">Build Resume</button></a></li>
+        </ul>
+        <ul>
+           <li class="logo" style="font-size: xx-large; font-family: Poppins; text-transform: uppercase; font-weight: bolder; text-shadow: 1px 1px 0px black;">Wajahat Ali</li>
+           <li class="hideOnMobile"><a href="index.html">Home</a></li>
+           <li class="hideOnMobile"><a href="about.html">About Me </a></li>
+         
+           <li class="hideOnMobile"><a href="input.html"><button class="btn">Generate Your Resume</button></a></li>
+           <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+       </nav>
+
+     <div class="content" style="height: 58vh; align-content: center;">
+
+
+
+      <h1 class="heading">Resume Builder</h1>
+      <p class="p1">Welcome to our intuitive Resume Builder, crafted by Wajahat Ali, a dedicated student of the Governor Sindh IT Course. This tool is designed to assist you in creating professional resumes in just minutes. Whether you’re a student, a recent graduate, or an experienced worker, our customizable templates will help you showcase your skills and accomplishments effectively. Simply input your information, and watch your resume come together instantly!</p>
+      <br>
+      <p class="p1">My mission is to make the resumebuilding process simple and accessible for everyone. With clean layouts, user friendly fields, and step by step guidance, you’ll have a polished resume ready to impress potential employers.</p>
+            <a href="input.html"><button class="main">Create Resume</button></a>
+     </div>
+
+    <div id="connect" class="Social-logo">
+    <a href="https://www.youtube.com/@wajahatali" target="_blank"></a>
+    <a href="https://linkedin.com/in/wajahatali" target="_blank"></a>
+    <a href="https://github.com/wajahatali" target="_blank"></a>
+    <a href="https://www.instagram.com/wajahatali/" target="_blank"></a>
+</div>
+
+     <div class="footer">
+    
+    <h5>Connect on Social Media</h5>
+    <br>
+    <div id="Connect" class="Social-logo">
+        <a href="https://www.youtube.com/@wajahatali"target="_blank"><img class="social" src="youtube.png"
+               alt="yt"></a>
+        <a href="wajahatali" target="_blank"><img class="social" src="linkedin.png"
+               alt="li"></a>
+         <a href="https://github.com/wajahatali" target="_blank"><img class="social" src="git.png"
+               alt="gh"></a>
+         <a href="https://www.instagram.com/wajahatali/" target="_blank"><img class="social" src="insta.png"
+               alt="ig"></a>
+      </div>
+      <br>
+      <h5>Thank you for visiting my resume builder! ❤️</h5>
+ </div>
+     <script>
+
+        function showSidebar() {
+           const sidebar = document.querySelector('.sidebar');
+           sidebar.style.display = 'flex';
+        }
+  
+        function hideSidebar() {
+           const sidebar = document.querySelector('.sidebar');
+           sidebar.style.display = 'none';
+        }
+       </script>
+</body>
+</html>
+

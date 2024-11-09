@@ -1,0 +1,239 @@
+   <!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Wajahat Ali Resume Generator </title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet">
+
+</head>
+
+<body class="input">
+
+   <nav>
+      <ul class="sidebar">
+         <li onclick=hideSidebar()><a class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="35px"
+                  viewBox="0 -960 960 960" width="35px" fill="#e8eaed">
+                  <path
+                     d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+               </svg></a></li>
+         <li><a href="index.html">Home</a></li>
+         <li><a href="about.html">About</a></li>
+         <li><a href="input.html"><button class="btn">Generate Your Resume</button></a></li>
+      </ul>
+      <ul>
+         <li class="logo"
+            style="font-size: xx-large; font-family: Poppins; text-transform: uppercase; font-weight: bolder; text-shadow: 1px 1px 0px black;">
+            Wajahat Ali </li>
+            <li class="hideOnMobile"><a href="index.html">Home</a></li>
+            <li class="hideOnMobile"><a href="about.html">About</a></li>
+            <li class="hideOnMobile"><a href="input.html"><button class="btn">Generate Your Resume</button></a></li>
+            <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="20px"
+                     viewBox="0 -960 960 960" width="40px" fill="#e8eaed">
+                     <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                  </svg></a></li>
+         </ul>  
+   </nav>
+   <div id="formArea" class="content" style=" align-content: center;">
+
+      
+      <h1 class="heading">Please Enter Your Details</h1>
+      <h2 class="question">Personal Information</h2>
+      
+
+      <div>
+         <h3>Enter Name</h3>
+         <input type="text" name="name" id="name" placeholder="full name">
+      </div>
+
+      <div>
+         <h3>Enter Email</h3>
+         <input type="email" name="email" id="email" placeholder="e.g. name@gmail.com">
+      </div>
+
+      <div>
+         <h3>Enter Mobile Number</h3>
+         <input type="tel" name="phone" id="phone" placeholder="e.g. +923**-*******">
+      </div>
+
+      <div>
+         <h3>Profile Picture</h3>
+         <div class="custom-upload">
+            <label for="photo" class="custom-label">Upload Your Resume Photo</label>
+
+            <input type="file" name="photo" id="photo" accept="image/*">
+         </div>
+      </div>
+
+      <h2 class="question">Education</h2>
+
+      <div id="education-section">
+         <h3>Enter Your Institute Name</h3>
+         <input type="text" name="school-name" id="school-name" placeholder="e.g. university name">
+         <h3>Enter Your Degree</h3>
+        <input type="text" name="degree" id="degree" placeholder="e.g. Matriculation">
+        <h5 style="color: gray; margin-bottom: 8px;">*optional data*</h5>
+        <h3>Enter Your School Details</h3>
+        <input type="text" name="school-name" id="school-name1" placeholder="e.g. school name">
+         <h3>Enter your degree</h3>
+        <input type="text" name="degree" id="degree1" placeholder="e.g. Matriculation">
+      </div>
+
+      <h2 class="question">Experience:</h2>
+
+      <div id="experience-section">
+         <h3>Enter Your Current Institute</h3>
+         <input type="text" name="ins-name" id="ins-name" placeholder="e.g. Governer Sindh Initiative">
+      <h3>Enter Your Role</h3>
+        <input type="text" name="ins-role" id="ins-role" placeholder="e.g. Student / Web Developer">
+        <h5 style="color: gray; margin-bottom: 8px;">*optional data*</h5>
+        <h3>Enter Your Roll Number</h3>
+        <input type="text" name="ins-name" id="ins-name1" placeholder="e.g. 20045678">
+      </div>
+
+      <div id="skills-section">
+         <h3>enter your skills:</h3>
+         <h5 style="color: gray; margin-bottom: 8px;">*Add Comma For Each Skill*</h5>
+      
+         <input type="text" name="skills-name" id="skills-name" placeholder="e.g. Web Designing , SEO etc">
+      </div>
+
+      <div id="projects-section">   
+         <h3>Enter Your Projects:</h3>
+         <h5 style="color: gray; margin-bottom: 8px;">*Add Comma For Each Project*</h5>
+         <input type="text" name="projects-name" id="projects-name" placeholder="e.g. GIAIC Card, Todo App , Countdown Timer etc">
+      </div>
+      <div>
+        <button id="submitBtn" class="main">Submit Now !</button>
+      </div>
+      </div>
+       
+     <div id="output" style="margin-top: 70px;">
+   <div class="resume-header">
+      <div id="photoDisplay"></div>
+    <h1 id="outputName">Name</h1>
+    <a id="outputEmail"  href="mailto:" style="text-transform: lowercase; text-decoration: none;"></a>
+    <p id="outputPhone" style="color: #310485;"></p>
+  </div>
+
+  <div class="resume-section">
+    <h2>Education's Details</h2>
+    <div class="resume-content">
+      <p><strong id="outputSchool">University Details</strong></p>
+      <p id="outputDegree">Degree</p>
+      <p><strong id="outputSchool1">School Details</strong></p>
+      <p id="outputDegree1">Last Degree</p>
+    </div>
+  </div>
+
+  <div class="resume-section">
+    <h2>Experience's Details</h2>
+    <div class="resume-content">
+      <p><strong id="outputIns">Company Name</strong></p>
+      <p id="outputRole">Job Title</p>
+      <p><strong id="outputIns1">Company Name</strong></p>
+      <p id="outputRole1">Job Title</p>
+    </div>
+  </div>
+
+  <div class="resume-section">
+    <h2>Skill's Details</h2>
+    <div class="resume-content">
+      <p id="outputSkills"></p>
+      <p id="outputSkills1"></p> 
+    </div>
+  </div>
+
+  <div class="resume-section">
+    <h2>Project's Details</h2>
+    <div class="resume-content">
+      <p id="outputProjects"></p>
+    </div>
+</div>
+<button id="printBtn">Download Resume</button>
+<button id="shareBtn">Share Resume</button>
+<button id="editBtn">Edit Resume </button>
+
+</div>
+
+
+      <div class="footer">
+    
+         <h5>Connect on Social Media</h5>
+    <br>
+    <div id="Connect" class="Social-logo">
+        <a href="https://www.youtube.com/@wajahatali"target="_blank"><img class="social" src="youtube.png"
+               alt="yt"></a>
+        <a href="wajahatali" target="_blank"><img class="social" src="linkedin.png"
+               alt="li"></a>
+         <a href="https://github.com/wajahatali" target="_blank"><img class="social" src="git.png"
+               alt="gh"></a>
+         <a href="https://www.instagram.com/wajahatali/" target="_blank"><img class="social" src="insta.png"
+               alt="ig"></a>
+      </div>
+      <br>
+      <h5>Thank you for visiting my resume builder! ❤️</h5>
+ </div>
+      </div>
+
+
+      <script>
+
+         function showSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+         }
+
+         function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+         }
+
+         const printBtn = document.getElementById('printBtn')
+
+         printBtn.addEventListener('click', () => {
+            print();
+         })
+         
+         document.getElementById('shareBtn')?.addEventListener('click', () => {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Share!',
+                    text: 'Check out this amazing page!',
+                    url: window.location.href
+                })
+                .then(() => { 
+                    console.log('Share successful!');
+                })
+                .catch((error) => {
+                    console.error('Error sharing:', error);
+                });
+            } else {
+                console.log('Share not supported on this browser.');    
+            }
+        });
+
+        document.getElementById('editBtn').addEventListener('click', () => {
+         
+        })
+
+        const editBtn = document.getElementById('editBtn');
+        editBtn.addEventListener('click', () => {
+    formArea.style.display = 'block';
+    output.style.display = 'none'; 
+});
+
+
+
+      </script>
+      <script src="script.js"></script>
+</body>
+
+</html>
+      
